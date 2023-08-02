@@ -85,3 +85,18 @@ Plus some organization with the gitignore.
 
 ## 008: Having a single server in production
 
+We now need to change the application into a "single page application" and for that we'll use [Nest Serve Static](https://docs.nestjs.com/recipes/serve-static) module:
+
+```
+npm install --workspace api @nestjs/serve-static
+```
+
+Change the Nest App to use `serve-static` by `modifying apps/api/src/app.module.ts` and do some additional tweaking so we can run again:
+
+```
+npm run build
+npm run start
+```
+
+So now our app is running entirely together at [localhost:3000](http://localhost:3000/).
+Both React and NEST running within a single server which is powered by NEST.
