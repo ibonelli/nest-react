@@ -29,3 +29,19 @@ The skeleton comes with some "git" stuff I deleted/moved to the parent repo.
 
 ### 003: Creating a React client with Vite
 
+```
+# still @ apps folder
+npm create vite@latest client
+```
+
+I choose "React" & "Typescript", and get a project's scaffolding for the FE.
+We now need to do the "npm install", but because we use workspaces... We should do it on the base directory!
+	(workspaces will look subdirs to get inner package.json files)
+
+```
+# root folder (with Turbo installed node_modules)
+cd .. ; npm install
+```
+
+### 004: Making all work together with Turbo
+
