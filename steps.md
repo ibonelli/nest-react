@@ -45,3 +45,18 @@ cd .. ; npm install
 
 ### 004: Making all work together with Turbo
 
+We create a turbo config file (turbo.json) and change package.json scripts to match dev.
+Turbo will run all at the same time for us.
+And now we can run:
+
+```
+npm run dev
+```
+
+Both running at the same time: [Vite:5173](http://localhost:5173/) & [Nest:3000](http://localhost:3000/)
+
+What we have now is **WebPack** waiting for changes in the *Nest App* & **Vite** waiting for changes in the *React App*.
+This is for the development application, but for production we want to have a different setup, with all running together.
+But for the development setup we need to "proxy" the requests of the ReactApp to NestApp.
+
+### 005: Setting up Vite to proxy requests from React to Nest
