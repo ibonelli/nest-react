@@ -60,3 +60,13 @@ This is for the development application, but for production we want to have a di
 But for the development setup we need to "proxy" the requests of the ReactApp to NestApp.
 
 ### 005: Setting up Vite to proxy requests from React to Nest
+
+We add a couple of configs:
+
+- `apps/client/vite.config.ts`: We tell Vite to proxy requests to the Nest server.
+- `apps/api/src/main.ts`: We make the default path `/api`.
+
+After this the Nest server URL changes to [/api](http://localhost:3000/api/).
+
+## 006: Making React request data from Nest
+
