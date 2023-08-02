@@ -75,3 +75,13 @@ This proxy only will happen in your dev setup, for production there will be no p
 
 ## 007: Creating the production setup
 
+We already have the `build` for both Nest & React. So we create the *Turbo* config for build and we can now do:
+
+```
+npm run build
+```
+
+Plus some organization with the gitignore.
+
+## 008: Having a single server in production
+
