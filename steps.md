@@ -68,12 +68,12 @@ We add a couple of configs:
 
 After this the Nest server URL changes to [/api](http://localhost:3000/api/).
 
-## 006: Making React request data from Nest
+### 006: Making React request data from Nest
 
 We modify `apps/client/src/App.tsx` and now what we get in React is the Nest data: [localhost:5173](http://localhost:5173/).
 This proxy only will happen in your dev setup, for production there will be no proxying.
 
-## 007: Creating the production setup
+### 007: Creating the production setup
 
 We already have the `build` for both Nest & React. So we create the *Turbo* config for build and we can now do:
 
@@ -83,7 +83,7 @@ npm run build
 
 Plus some organization with the gitignore.
 
-## 008: Having a single server in production
+### 008: Having a single server in production
 
 We now need to change the application into a "single page application" and for that we'll use [Nest Serve Static](https://docs.nestjs.com/recipes/serve-static) module:
 
@@ -100,3 +100,26 @@ npm run start
 
 So now our app is running entirely together at [localhost:3000](http://localhost:3000/).
 Both React and NEST running within a single server which is powered by NEST.
+
+## Summary
+
+We now have the application running in DEV mode "decoupled":
+
+```
+npm run dev
+```
+
+And for production mode we "bind" it together so we have a single server:
+
+```
+npm run build
+npm run start
+```
+
+Original work from [Marius Espejo YTvideo: Can we combine a NestJS app with React?](https://www.youtube.com/watch?v=nY0R7pslbCI).
+
+Besides NestJS & React, this projects uses the following technologies:
+- [workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces): Helps with the mono-repo setup.
+- [Turbo](https://github.com/vercel/turbo): Toolchain for frontend development. By Vercel & written in Rust.
+- [Vite](https://vitejs.dev/guide/): To scaffold the React App.
+- [Nest Serve Static](https://docs.nestjs.com/recipes/serve-static): To have a single server in production.
