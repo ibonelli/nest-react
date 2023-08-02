@@ -70,3 +70,8 @@ After this the Nest server URL changes to [/api](http://localhost:3000/api/).
 
 ## 006: Making React request data from Nest
 
+We modify `apps/client/src/App.tsx` and now what we get in React is the Nest data: [localhost:5173](http://localhost:5173/).
+This proxy only will happen in your dev setup, for production there will be no proxying.
+
+## 007: Creating the production setup
+
