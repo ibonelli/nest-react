@@ -101,6 +101,11 @@ npm run start
 So now our app is running entirely together at [localhost:3000](http://localhost:3000/).
 Both React and NEST running within a single server which is powered by NEST.
 
+### 009: Making production port configurable
+
+This is important to be able to change it for production.
+
+
 ## Summary
 
 We now have the application running in DEV mode "decoupled":
